@@ -1,4 +1,8 @@
 {
   "welcome": "欢迎",
-  "settings": "设置"
+  "settings": "设置",
+  "coming.soon.title": "敬请期待！",
+  "coming.soon.desc": "此页面目前尚未创建。<br />请继续关注！",
+  "lang.en": "英语",
+  "lang.zh": "中文"
 }

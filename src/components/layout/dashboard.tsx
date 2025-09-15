@@ -1,5 +1,8 @@
 import { Outlet } from 'react-router-dom'
+import { AppHeader } from '@/components/layout/app-header'
 import { AppSidebar } from '@/components/layout/app-sidebar'
+import { LangSwitch } from '@/components/layout/lang-switch'
+import { ThemeSwitch } from '@/components/layout/theme-switch'
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar'
 import { cn } from '@/lib/utils'
 
@@ -18,6 +21,13 @@ export const Dashboard = () => (
         'peer-data-[variant=inset]:has-[[data-layout=fixed]]:h-[calc(100svh-(var(--spacing)*4))]',
       )}
     >
+      <AppHeader>
+        Test2
+        <div className="ms-auto flex items-center space-x-4">
+          <LangSwitch />
+          <ThemeSwitch />
+        </div>
+      </AppHeader>
       <Outlet />
     </SidebarInset>
   </SidebarProvider>

@@ -1,4 +1,8 @@
 {
   "welcome": "Welcome",
-  "settings": "Settings"
+  "settings": "Settings",
+  "coming.soon.title": "Coming Soon!",
+  "coming.soon.desc": "This page has not been created yet.<br />Stay tuned though!",
+  "lang.en": "English",
+  "lang.zh": "Chinese"
 }

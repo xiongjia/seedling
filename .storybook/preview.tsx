@@ -39,7 +39,7 @@ export const globalTypes = {
       icon: 'globe',
       items: [
         { value: 'en', title: 'English' },
-        { value: 'zh-CN', title: '中文简体' },
+        { value: 'zh', title: '中文 (Chinese)' },
       ],
       showName: true,
     },

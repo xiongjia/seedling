@@ -8,7 +8,7 @@ const resources = {
   en: {
     common: enCommon,
   },
-  'zh-CN': {
+  zh: {
     common: cnCommon,
   },
 }
