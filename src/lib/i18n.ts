@@ -1,20 +1,15 @@
 import i18n from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
+import cnCommon from '@/locales/cn-common.json'
+import enCommon from '@/locales/en-common.json'
 
-// TODO load resources from JSON files
 const resources = {
   en: {
-    translation: {
-      'Welcome to React': 'Welcome to React',
-      Settings: 'Settings',
-    },
+    common: enCommon,
   },
   'zh-CN': {
-    translation: {
-      'Welcome to React': '你好 React',
-      Settings: '设置',
-    },
+    common: cnCommon,
   },
 }
 
@@ -29,6 +24,8 @@ i18n
       order: ['querystring', 'navigator', 'localStorage'],
       lookupQuerystring: 'lang',
     },
+    ns: ['common'],
+    defaultNS: 'common',
   })
 
 export default i18n
