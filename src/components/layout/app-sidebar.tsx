@@ -16,7 +16,7 @@ export const AppSidebar = () => {
 
   const menuItems = [
     {
-      title: t('welcome'),
+      title: t('home'),
       url: '/',
       icon: Home,
     },

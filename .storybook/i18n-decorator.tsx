@@ -1,8 +1,17 @@
+import type { StoryContext } from '@storybook/react-vite'
 import { useEffect } from 'react'
 import { I18nextProvider } from 'react-i18next'
 import i18n from '../src/lib/i18n'
 
-const I18nDecorator = ({ storyContext, children }) => {
+type I18nDecoratorProps = {
+  children: React.ReactNode
+  storyContext: StoryContext
+}
+
+export const I18nDecorator = ({
+  storyContext,
+  children,
+}: I18nDecoratorProps) => {
   const { locale } = storyContext.globals
   useEffect(() => {
     if (locale && i18n.language !== locale) {
@@ -10,12 +19,4 @@ const I18nDecorator = ({ storyContext, children }) => {
     }
   }, [locale])
   return <I18nextProvider i18n={i18n}>{children}</I18nextProvider>
-}
-
-export const withI18next = (Story, context) => {
-  return (
-    <I18nDecorator storyContext={context}>
-      <Story {...context} />
-    </I18nDecorator>
-  )
 }

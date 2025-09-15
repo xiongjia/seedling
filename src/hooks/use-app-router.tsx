@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { Dashboard } from '@/components/layout/dashboard'
+import { HomePage } from '@/pages/home'
 import { SettingsPage } from '@/pages/settings'
-import { WelcomePage } from '@/pages/welcome'
 
 export const useAppRouter = () => {
   const router = createBrowserRouter([
@@ -9,7 +9,7 @@ export const useAppRouter = () => {
       path: '/',
       element: <Dashboard />,
       children: [
-        { index: true, element: <WelcomePage /> },
+        { index: true, element: <HomePage /> },
         { path: 'settings', element: <SettingsPage /> },
       ],
     },

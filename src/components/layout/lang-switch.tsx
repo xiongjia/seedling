@@ -29,7 +29,7 @@ export const LangSwitch = () => {
             changeLanguage('en')
           }}
         >
-          {t('lang.en')}{' '}
+          {t('lang.en')}
           <Check
             size={14}
             className={cn('ms-auto', lang !== 'en' && 'hidden')}
@@ -40,7 +40,7 @@ export const LangSwitch = () => {
             changeLanguage('zh')
           }}
         >
-          {t('lang.zh')}{' '}
+          {t('lang.zh')}
           <Check
             size={14}
             className={cn('ms-auto', lang !== 'zh' && 'hidden')}

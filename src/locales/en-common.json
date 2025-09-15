@@ -1,8 +1,11 @@
 {
-  "welcome": "Welcome",
+  "home": "Home",
   "settings": "Settings",
   "coming.soon.title": "Coming Soon!",
   "coming.soon.desc": "This page has not been created yet.<br />Stay tuned though!",
   "lang.en": "English",
-  "lang.zh": "Chinese"
+  "lang.zh": "Chinese",
+  "theme.dark": "Dark",
+  "theme.light": "Light",
+  "theme.sys": "System"
 }

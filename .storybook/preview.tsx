@@ -1,7 +1,7 @@
 import type { Preview } from '@storybook/react-vite'
 import '../src/index.css'
 import { withThemeByClassName } from '@storybook/addon-themes'
-import { withI18next } from './i18n-decorator'
+import { I18nDecorator } from './i18n-decorator'
 
 const preview: Preview = {
   parameters: {
@@ -27,7 +27,11 @@ const preview: Preview = {
       defaultTheme: 'light',
       parentSelector: 'html',
     }),
-    withI18next,
+    (Story, context) => (
+      <I18nDecorator storyContext={context}>
+        <Story {...context} />
+      </I18nDecorator>
+    ),
   ],
 }
 

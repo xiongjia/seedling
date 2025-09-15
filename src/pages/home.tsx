@@ -1,5 +1,5 @@
 import { ComingSoon } from '@/components/misc/coming-soon'
 
-export const SettingsPage = () => {
+export const HomePage = () => {
   return <ComingSoon />
 }

@@ -1,4 +1,5 @@
 import { Check, Moon, Sun } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
@@ -10,6 +11,7 @@ import { useTheme } from '@/context/theme-provider'
 import { cn } from '@/lib/utils'
 
 export const ThemeSwitch = () => {
+  const { t } = useTranslation()
   const { theme, setTheme } = useTheme()
   return (
     <DropdownMenu modal={false}>
@@ -22,21 +24,21 @@ export const ThemeSwitch = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme('light')}>
-          Light{' '}
+          {t('theme.light')}
           <Check
             size={14}
             className={cn('ms-auto', theme !== 'light' && 'hidden')}
           />
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme('dark')}>
-          Dark
+          {t('theme.dark')}
           <Check
             size={14}
             className={cn('ms-auto', theme !== 'dark' && 'hidden')}
           />
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme('system')}>
-          System
+          {t('theme.sys')}
           <Check
             size={14}
             className={cn('ms-auto', theme !== 'system' && 'hidden')}
