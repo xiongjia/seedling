@@ -7,5 +7,7 @@
   "lang.zh": "中文",
   "theme.dark": "深色",
   "theme.light": "浅色",
-  "theme.sys": "系统"
+  "theme.sys": "系统",
+  "top.menu1": "菜单1",
+  "top.menu2": "菜单2"
 }

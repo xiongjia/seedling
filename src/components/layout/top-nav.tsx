@@ -29,11 +29,16 @@ export function TopNav({ className, links, ...props }: TopNavProps) {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent side="bottom" align="start">
-            {links.map(({ title, href, isActive }) => (
+            {links.map(({ title, href, isActive, disabled }) => (
               <DropdownMenuItem key={`${title}-${href}`} asChild>
                 <Link
                   to={href}
-                  className={!isActive ? 'text-muted-foreground' : ''}
+                  className={cn(
+                    !isActive ? 'text-muted-foreground' : '',
+                    disabled
+                      ? 'pointer-events-none text-gray-400 cursor-not-allowed'
+                      : '',
+                  )}
                 >
                   {title}
                 </Link>
@@ -50,11 +55,16 @@ export function TopNav({ className, links, ...props }: TopNavProps) {
         )}
         {...props}
       >
-        {links.map(({ title, href, isActive }) => (
+        {links.map(({ title, href, isActive, disabled }) => (
           <Link
             key={`${title}-${href}`}
             to={href}
-            className={`hover:text-primary text-sm font-medium transition-colors ${isActive ? '' : 'text-muted-foreground'}`}
+            className={cn(
+              `hover:text-primary text-sm font-medium transition-colors ${isActive ? '' : 'text-muted-foreground'}`,
+              disabled
+                ? 'pointer-events-none text-gray-400 cursor-not-allowed'
+                : '',
+            )}
           >
             {title}
           </Link>

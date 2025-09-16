@@ -12,14 +12,16 @@ export const Dashboard = () => {
   const { t } = useTranslation()
   const topNavMenus = [
     {
-      title: t('home'),
-      href: '/',
+      title: t('top.menu1'),
+      href: '#',
       isActive: true,
+      disabled: true,
     },
     {
-      title: t('settings'),
-      href: '/settings',
+      title: t('top.menu2'),
+      href: '#',
       isActive: false,
+      disabled: true,
     },
   ]
 

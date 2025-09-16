@@ -7,5 +7,7 @@
   "lang.zh": "Chinese",
   "theme.dark": "Dark",
   "theme.light": "Light",
-  "theme.sys": "System"
+  "theme.sys": "System",
+  "top.menu1": "Menu1",
+  "top.menu2": "Menu2"
 }
