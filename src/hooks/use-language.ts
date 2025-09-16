@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import i18n from '@/lib/i18n'
 
 type SupportedLanguage = 'en' | 'zh'
-
+const storageKey = 'i18nextLng'
 export const useLanguage = () => {
   const [language, setLanguage] = useState<SupportedLanguage>(
     ((): SupportedLanguage => {
@@ -14,10 +14,13 @@ export const useLanguage = () => {
     })(),
   )
   const changeLanguage = (lng: SupportedLanguage) => {
+    console.log('set lang', lng)
+    localStorage.setItem(storageKey, lng)
     i18n.changeLanguage(lng)
   }
   useEffect(() => {
     const onLanguageChange = (lng: string) => {
+      console.log('on lang change', lng)
       let baseLng = lng.split('-')[0] as SupportedLanguage
       if (baseLng !== 'en' && baseLng !== 'zh') {
         baseLng = 'en'
