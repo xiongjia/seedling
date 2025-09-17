@@ -10,7 +10,7 @@ import {
 import { useTheme } from '@/context/theme-provider'
 import { cn } from '@/lib/utils'
 
-export const ThemeSwitch = () => {
+export const ThemeSwitcher = () => {
   const { t } = useTranslation()
   const { theme, setTheme } = useTheme()
   return (

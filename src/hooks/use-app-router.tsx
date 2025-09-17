@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { Dashboard } from '@/components/layout/dashboard'
-import { HomePage } from '@/pages/home'
+import { HomePage } from '@/pages/home/home'
 import { SettingsPage } from '@/pages/settings'
 
 export const useAppRouter = () => {

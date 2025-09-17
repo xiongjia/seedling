@@ -10,7 +10,7 @@ import {
 import { useLanguage } from '@/hooks/use-language'
 import { cn } from '@/lib/utils'
 
-export const LangSwitch = () => {
+export const LangSwitcher = () => {
   const { t } = useTranslation()
   const [lang, changeLanguage] = useLanguage()
 
