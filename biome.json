@@ -20,7 +20,11 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "nursery": {
+        "useValidAriaRole": "off",
+        "useSvgTitle": "off"
+      }
     }
   },
   "javascript": {
