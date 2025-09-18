@@ -16,12 +16,14 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar'
 
+export type TeamItem = {
+  name: string
+  logo: React.ElementType
+  plan: string
+}
+
 type TeamSwitcherProps = {
-  teams: {
-    name: string
-    logo: React.ElementType
-    plan: string
-  }[]
+  teams: TeamItem[]
 }
 
 export function TeamSwitcher({ teams }: TeamSwitcherProps) {

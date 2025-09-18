@@ -9,5 +9,9 @@
   "theme.light": "Light",
   "theme.sys": "System",
   "top.menu1": "Menu1",
-  "top.menu2": "Menu2"
+  "top.menu2": "Menu2",
+  "team.admin": "Admin",
+  "team.admin.plan": "Dashboard",
+  "team.test1": "Test1",
+  "team.test1.plan": "Test1"
 }

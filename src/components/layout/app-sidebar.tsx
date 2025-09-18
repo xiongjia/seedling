@@ -1,9 +1,6 @@
-// import { Home, Settings } from 'lucide-react'
-// import { useTranslation } from 'react-i18next'
-// import { TeamSwitcher } from '@/components/layout/team-switch'
-
-import { LayoutDashboard } from 'lucide-react'
-import { useLocation } from 'react-router-dom'
+import { Fingerprint, LayoutDashboard, Shell } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
+import { type TeamItem, TeamSwitcher } from '@/components/layout/team-switch'
 import {
   Sidebar,
   SidebarContent,
@@ -14,9 +11,21 @@ import { NavGroup } from './nav-group'
 import type { NavItem } from './nav-types'
 
 export const AppSidebar = () => {
-  const href = useLocation()
+  const { t } = useTranslation()
 
-  console.log('href = ', href)
+  // APP teams
+  const appTeams: TeamItem[] = [
+    {
+      name: t('team.admin'),
+      logo: Shell,
+      plan: t('team.admin.plan'),
+    },
+    {
+      name: t('team.test1'),
+      logo: Fingerprint,
+      plan: t('team.test1.plan'),
+    },
+  ]
 
   const navGroupItems: NavItem[] = [
     {
@@ -25,7 +34,6 @@ export const AppSidebar = () => {
       icon: LayoutDashboard,
     },
   ]
-  console.log('grp', navGroupItems)
 
   // const { t } = useTranslation()
 
@@ -44,7 +52,9 @@ export const AppSidebar = () => {
 
   return (
     <Sidebar>
-      <SidebarHeader>{/* <TeamSwitcher teams={[]} /> */}</SidebarHeader>
+      <SidebarHeader>
+        <TeamSwitcher teams={appTeams} />
+      </SidebarHeader>
       <SidebarContent>
         <NavGroup items={navGroupItems} title="test" />
       </SidebarContent>

@@ -18,7 +18,7 @@ type TopNavProps = React.HTMLAttributes<HTMLElement> & {
   }[]
 }
 
-export function TopNav({ className, links, ...props }: TopNavProps) {
+export const TopNav = ({ className, links, ...props }: TopNavProps) => {
   return (
     <>
       <div className="lg:hidden">
@@ -47,7 +47,6 @@ export function TopNav({ className, links, ...props }: TopNavProps) {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-
       <nav
         className={cn(
           'hidden items-center space-x-4 lg:flex lg:space-x-4 xl:space-x-6',

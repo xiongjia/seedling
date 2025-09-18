@@ -12,6 +12,16 @@ import {
 } from '@/components/ui/tooltip'
 import { cn } from '@/lib/utils'
 
+const checkOverflow = (textContainer: HTMLDivElement | null) => {
+  if (textContainer) {
+    return (
+      textContainer.offsetHeight < textContainer.scrollHeight ||
+      textContainer.offsetWidth < textContainer.scrollWidth
+    )
+  }
+  return false
+}
+
 type LongTextProps = {
   children: React.ReactNode
   className?: string
@@ -31,16 +41,16 @@ export function LongText({
       setIsOverflown(true)
       return
     }
-
     setIsOverflown(false)
   }, [])
 
-  if (!isOverflown)
+  if (!isOverflown) {
     return (
       <div ref={ref} className={cn('truncate', className)}>
         {children}
       </div>
     )
+  }
 
   return (
     <>
@@ -72,14 +82,4 @@ export function LongText({
       </div>
     </>
   )
-}
-
-const checkOverflow = (textContainer: HTMLDivElement | null) => {
-  if (textContainer) {
-    return (
-      textContainer.offsetHeight < textContainer.scrollHeight ||
-      textContainer.offsetWidth < textContainer.scrollWidth
-    )
-  }
-  return false
 }
