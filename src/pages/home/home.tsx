@@ -4,13 +4,7 @@ import { LangSwitcher } from '@/components/layout/lang-switch'
 import { Main } from '@/components/layout/main'
 import { ThemeSwitcher } from '@/components/layout/theme-switch'
 import { TopNav } from '@/components/layout/top-nav'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tabs, TabsContent } from '@/components/ui/tabs'
 
 export const HomePage = () => {
