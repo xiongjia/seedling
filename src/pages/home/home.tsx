@@ -6,6 +6,7 @@ import { ThemeSwitcher } from '@/components/layout/theme-switch'
 import { TopNav } from '@/components/layout/top-nav'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tabs, TabsContent } from '@/components/ui/tabs'
+import { IconMoney } from '@/icons'
 
 export const HomePage = () => {
   const { t } = useTranslation()
@@ -45,18 +46,7 @@ export const HomePage = () => {
                   <CardTitle className="text-sm font-medium">
                     Total Revenue
                   </CardTitle>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="text-muted-foreground h-4 w-4"
-                  >
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
+                  <IconMoney />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">$45,231.89</div>
