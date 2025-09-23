@@ -1,19 +1,22 @@
 /// <reference types="vitest/config" />
 import path from 'node:path'
+// https://vite.dev/config/
+import { fileURLToPath } from 'node:url'
+import { storybookTest } from '@storybook/addon-vitest/vitest-plugin'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react-swc'
 import { defineConfig } from 'vite'
 
-// https://vite.dev/config/
-import { fileURLToPath } from 'node:url'
-import { storybookTest } from '@storybook/addon-vitest/vitest-plugin'
 const dirname =
   typeof __dirname !== 'undefined'
     ? __dirname
     : path.dirname(fileURLToPath(import.meta.url))
 
+const isGitHubPagesBuild = process.env.VITE_GITHUB_PAGES_BUILD === 'true'
+
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
+  base: isGitHubPagesBuild ? '/seedling/' : '/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

@@ -32,6 +32,8 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build React App
+        env:
+          VITE_GITHUB_PAGES_BUILD: true
         run: pnpm run predeploy
 
       - name: Deploy to GitHub Pages
